@@ -17,7 +17,8 @@ read input
 
 if [[ $input -gt ${#accounts[@]} || $input -lt 1 ]]; then
   echo "Not a valid account number"
-  exit 1
+  return
+  echo ""
 
 elif [[ $input -eq 1 ]]; then
   export AWS_ACCESS_KEY_ID="";export AWS_SECRET_ACCESS_KEY="";export AWS_REGION="us-east-1" ;
