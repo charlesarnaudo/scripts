@@ -1,5 +1,0 @@
-#!/bin/bash
-# read from hashicorp vault
-
-echo ""
-vault read secret/$1/ansible-vault
