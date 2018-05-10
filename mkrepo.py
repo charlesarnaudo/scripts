@@ -18,4 +18,8 @@ args = parser.parse_args()
 
 g = github.Github(os.environ.get('GITHUB_ACCESS_TOKEN'))
 
-g.get_user().create_repo(name=args.name, private=args.isPrivate)
+try: 
+    new_repo = g.get_user().create_repo(name=args.name, private=args.isPrivate)
+    print("Success! The repo's url is: " + new_repo.ssh_url)
+except Exception as e:
+    print(e)

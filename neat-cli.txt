@@ -1,3 +1,0 @@
-# copy all files recursively of certain type
-find . -name '*.txt' | cpio -pdm /path/to/destdir
-
