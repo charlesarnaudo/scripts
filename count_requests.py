@@ -1,6 +1,8 @@
 # Count the number of requests a unique host made given a logfile
 def parse_hostname(line):
+    # return re.search(r'\w+\.\w+\.\w+', line).group(0)
     return (line.split(" ")[0])
+ 
 
 filename = input()
 request_counts = {}
