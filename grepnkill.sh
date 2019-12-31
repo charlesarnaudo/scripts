@@ -4,4 +4,4 @@ if [[ -z "$1" ]]; then
     exit 1
 fi
 
-kill -9 $(ps aux | grep '[/Applications/]$1' | awk '{print $2}')
+kill $(ps aux | grep '[/Applications/]$1' | awk '{print $2}')
